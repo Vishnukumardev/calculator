@@ -26,6 +26,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     Get.put(Calculatorcontroller());
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Calculator',
       theme: Provider.of<ProviderState>(context).themeData,
       home: Calculatorscreen(),

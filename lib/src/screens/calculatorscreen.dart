@@ -69,12 +69,24 @@ class _CalculatorscreenState extends State<Calculatorscreen> {
           ),
           _buildButtonRow(
               context, ['7', '8', '9', '/'], onNumberPress, onOperationPress),
+          SizedBox(
+            height: 5.0,
+          ),
           _buildButtonRow(
               context, ['4', '5', '6', '*'], onNumberPress, onOperationPress),
+          SizedBox(
+            height: 5.0,
+          ),
           _buildButtonRow(
               context, ['1', '2', '3', '-'], onNumberPress, onOperationPress),
+          SizedBox(
+            height: 5.0,
+          ),
           _buildButtonRow(context, ['0', 'C', '=', '+'], onNumberPress,
-              onOperationPress, onEqualsPress)
+              onOperationPress, onEqualsPress),
+          SizedBox(
+            height: 15.0,
+          ),
         ],
       ),
     );
@@ -101,14 +113,19 @@ class _CalculatorscreenState extends State<Calculatorscreen> {
               }
             },
             child: Container(
-              color: Theme.of(context).colorScheme.primary,
-              height: MediaQuery.of(context).size.height * 0.1,
-              width: MediaQuery.of(context).size.width * 0.05,
-              child: Text(
-                label,
-                style: TextStyle(
-                  fontSize: 24,
-                  color: Theme.of(context).colorScheme.secondary,
+              decoration: BoxDecoration(
+                color: Theme.of(context).colorScheme.secondary,
+                borderRadius: BorderRadius.circular(50),
+              ),
+              height: MediaQuery.of(context).size.height * 0.08,
+              width: MediaQuery.of(context).size.width * 0.15,
+              child: Center(
+                child: Text(
+                  label,
+                  style: TextStyle(
+                    fontSize: 24,
+                    color: Theme.of(context).colorScheme.primary,
+                  ),
                 ),
               ),
             ),
